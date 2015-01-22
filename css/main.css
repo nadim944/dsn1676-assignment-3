@@ -19,13 +19,38 @@ html {
 }
 
 body {
-    background-image: url(../images/stars.svg);
     background-color: black;
 }
 
 .stars {
-    scale: 2 2;
+    width: 100%;
+    height: 100vh;
+    animation: stars-scale ease-in 3s;
+    background-image: url(../images/stars.svg);
+}
 
+@-webkit-keyframes stars-scale {
+    
+    0% {
+        -webkit-transform: scale(1,1);
+    }
+    
+    100% {
+        -webkit-transform: scale(2,2);
+
+    } 
+}
+
+@keyframes stars-scale {
+    
+    0% {
+        transform: scale(1,1);
+    }
+    
+    100% {
+        transform: scale(2,2);
+
+    } 
 }
 
 .asteroid {
@@ -34,8 +59,23 @@ body {
     width: 200px;
     top: 5em;
     left: 5em;
+    -webkit-animation: asteroid-rotate linear 3s infinite;
     animation: asteroid-rotate linear 3s infinite; 
     background-size: 60%;
+    transform-origin: center;
+    
+}
+
+@-webkit-keyframes asteroid-rotate {
+    
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform: rotate(360deg);
+
+    }
     
 }
 
@@ -48,30 +88,73 @@ body {
     100% {
         transform: rotate(360deg);
 
-    }
-    
+    } 
 }
 
 .space-ship {
     position: absolute;
     background-repeat: no-repeat;
-    width: 160px;
+    width: 150px;
     top: 5em;
     left: 30em;
-    animation: asteroid-rotate linear 3s infinite; 
+    -webkit-animation: space-ship-bounce linear 3s infinite;
+    animation: space-ship-bounce linear 3s infinite; 
     background-size: 60%;
+    transform-origin: center;
 }
 
-@keyframes space-ship-rotate {
+@-webkit-keyframes space-ship-bounce {
     
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: translate(0);
     }
     
+    50% {
+        -webkit-transform: translate(200px);
+    }
+  
+    65% {
+        -webkit-transform: translate(100px);
+    }
+      
+    75% {
+        -webkit-transform: translate(200px);
+    }
+      
+    86.78% {
+        -webkit-transform: translate(150px);
+    }
+      
     100% {
-        transform: rotate(360deg);
+        -webkit-transform: translate(200px);
+    }
+}
 
+@keyframes space-ship-bounce {
+    
+    0% {
+        transform: translate(0);
     }
     
+    50% {
+        transform: translate(200px);
+    }
+  
+    65% {
+        transform: translate(100px);
+    }
+      
+    75% {
+        transform: translate(200px);
+    }
+      
+    86.78% {
+        transform: translate(150px);
+    }
+      
+    100% {
+        transform: translate(200px);
+    }
 }
+
 
