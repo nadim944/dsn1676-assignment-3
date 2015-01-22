@@ -17,3 +17,61 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+body {
+    background-image: url(../images/stars.svg);
+    background-color: black;
+}
+
+.stars {
+    scale: 2 2;
+
+}
+
+.asteroid {
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 200px;
+    top: 5em;
+    left: 5em;
+    animation: asteroid-rotate linear 3s infinite; 
+    background-size: 60%;
+    
+}
+
+@keyframes asteroid-rotate {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+
+    }
+    
+}
+
+.space-ship {
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 160px;
+    top: 5em;
+    left: 30em;
+    animation: asteroid-rotate linear 3s infinite; 
+    background-size: 60%;
+}
+
+@keyframes space-ship-rotate {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+
+    }
+    
+}
+
