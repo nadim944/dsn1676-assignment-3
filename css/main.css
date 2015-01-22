@@ -74,7 +74,6 @@ body {
     
     100% {
         -webkit-transform: rotate(360deg);
-
     }
 }
 
@@ -86,7 +85,6 @@ body {
     
     100% {
         transform: rotate(360deg);
-
     } 
 }
 
